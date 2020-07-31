@@ -10,6 +10,9 @@ const Card = styled.div`
 const AirlineLogo = styled.div`
 	width: 50px;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
 
 	img{
 		height: 50px;
@@ -47,7 +50,7 @@ const AirlineDisplay = (props) =>{
 			<AirlineName> {props.attributes.name}</AirlineName>
 			<div className="airline-score"> {props.attributes.avg_score}</div>
 			<LinkWrapper>
-				<Link href={`/airlines/${props.attributes.slgu}`}> View Airline</Link>
+				<Link to={`/airlines/${props.attributes.slug}`}> View Airline</Link>
 			</LinkWrapper>
 		</Card>
 	)
